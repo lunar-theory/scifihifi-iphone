@@ -110,7 +110,7 @@ static NSString *SFHFKeychainUtilsErrorDomain = @"SFHFKeychainUtilsErrorDomain";
 		return;
 	}
 	
-	*error = nil;
+	if (error) *error = nil;
 	
 	if (item) {
 		status = SecKeychainItemModifyAttributesAndData(item,
